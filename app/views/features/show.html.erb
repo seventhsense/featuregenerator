@@ -1,0 +1,8 @@
+<h1>
+  <%= to_feature_filename @feature.name %>
+</h1>
+
+<%= raw to_code @feature %>
+
+<%= link_to 'Edit', edit_feature_path(@feature) %> |
+<%= link_to 'Back', features_path %>

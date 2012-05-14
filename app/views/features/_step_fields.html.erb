@@ -1,0 +1,9 @@
+<li>
+<fieldset>
+  <%= f.select :given_when_then,["Given","When","Then"] %>
+  <%= f.text_field :body ,class: "step_body", data:{autocomplete_source: features_search_path} %>
+  <%= f.hidden_field :position ,class: 'position'%>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "Remove","#",class: "remove_fields" %>
+</fieldset>
+</li>

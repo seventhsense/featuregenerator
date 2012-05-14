@@ -1,0 +1,13 @@
+<fieldset class="scenario_fieldset">
+  <%= f.label :body,"Scinario: " %>
+  <%= f.text_field :body %>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "Remove Scenario","#",class: "remove_fields" %>
+  <% @count += 1 %>
+  <ol id="step_list_<%= @count %>" class="step_list" data-update-url="<%= sort_features_url %>">
+    <%= f.fields_for :steps do |builder| %>
+      <%= render 'step_fields',f: builder %>
+    <% end %>
+    <%= link_to_add_fields "Add new step" ,f,:steps %>
+  </ol>
+</fieldset>
