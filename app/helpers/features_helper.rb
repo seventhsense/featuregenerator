@@ -27,6 +27,7 @@ module FeaturesHelper
       end
     end
 
-    Pygments.highlight(string, lexer: 'Gherkin')
+    simple_format string
+    # Pygments.highlight(string, lexer: 'Gherkin')
   end
 end
